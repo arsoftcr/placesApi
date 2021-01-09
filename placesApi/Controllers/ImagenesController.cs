@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
@@ -60,14 +61,15 @@ namespace placesApi.Controllers
             FileContentResult result = null;
             try
             {
-                List<Dictionary<string, object>> datos = new List<Dictionary<string, object>>();
+                List<dynamic> datos = new List<dynamic>();
 
                 using (var plaze = new PlaceManager())
                 {
                     datos = await plaze.consultarImagenesXIdVisual(id);
                 }
 
-                var bites = datos[0]["data"];
+
+                var bites = datos.Cast<dynamic>().ToList().FirstOrDefault().data;
 
                  result = new FileContentResult(bites as byte[], "image/jpg");
             }

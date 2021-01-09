@@ -281,7 +281,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "noef/4.0.2": {
+      "noef/4.0.3": {
         "type": "package",
         "dependencies": {
           "MySql.Data": "8.0.19",
@@ -2379,17 +2379,17 @@
         "packageIcon.png"
       ]
     },
-    "noef/4.0.2": {
-      "sha512": "IcG5a6ZTi+0Obw5UDyP4d84VA9OSPHE45bBQoXGzsA42zfApWfax3HiEr3fqutyGpw916nVjnJmpd1hBEqRPNQ==",
+    "noef/4.0.3": {
+      "sha512": "J/4Dch5FUIdBDOnZMafJUiZraJ3s1/H73R3Z6Y/OOqN/s12T/o5KqoWG25qnovJUDRM/0kbiLL4FETaceelPnQ==",
       "type": "package",
-      "path": "noef/4.0.2",
+      "path": "noef/4.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.md",
         "about.jpg",
         "lib/netstandard2.0/noef.dll",
-        "noef.4.0.2.nupkg.sha512",
+        "noef.4.0.3.nupkg.sha512",
         "noef.nuspec"
       ]
     },
@@ -6604,29 +6604,32 @@
       "Microsoft.IdentityModel.Tokens >= 6.8.0",
       "Swashbuckle.AspNetCore >= 5.0.0",
       "System.IdentityModel.Tokens.Jwt >= 6.8.0",
-      "noef >= 4.0.2"
+      "noef >= 4.0.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\rviquez\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\placesApi.csproj",
+      "projectUniqueName": "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\placesApi.csproj",
       "projectName": "placesApi",
-      "projectPath": "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\placesApi.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\obj\\",
+      "projectPath": "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\placesApi.csproj",
+      "packagesPath": "C:\\Users\\rviquez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rviquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -6634,11 +6637,15 @@
         "netcoreapp3.1"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6650,6 +6657,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
@@ -6669,7 +6677,7 @@
           },
           "noef": {
             "target": "Package",
-            "version": "[4.0.2, )"
+            "version": "[4.0.3, )"
           }
         },
         "imports": [
@@ -6690,7 +6698,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -6699,7 +6707,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "El paquete \"Oracle.ManagedDataAccess 19.6.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.1\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "message": "Package 'Oracle.ManagedDataAccess 19.6.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
       "libraryId": "Oracle.ManagedDataAccess",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

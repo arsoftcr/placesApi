@@ -1,24 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\placesApi.csproj": {}
+    "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\placesApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\placesApi.csproj": {
+    "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\placesApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\placesApi.csproj",
+        "projectUniqueName": "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\placesApi.csproj",
         "projectName": "placesApi",
-        "projectPath": "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\placesApi.csproj",
-        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrator\\source\\repos\\placesApi\\placesApi\\obj\\",
+        "projectPath": "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\placesApi.csproj",
+        "packagesPath": "C:\\Users\\rviquez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rviquez\\Source\\Repos\\arsoftcr\\placesApi\\placesApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\Offline Packages",
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rviquez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 20.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -26,11 +29,15 @@
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.1\\Components\\System\\Components\\Packages": {},
+          "C:\\Program Files (x86)\\DevExpress 20.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -42,6 +49,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -61,7 +69,7 @@
             },
             "noef": {
               "target": "Package",
-              "version": "[4.0.2, )"
+              "version": "[4.0.3, )"
             }
           },
           "imports": [
@@ -82,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

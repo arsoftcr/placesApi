@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,7 @@ namespace placesApi.Controllers
            
             Token Tokenizer=null;
 
-            List<Dictionary<string,object>> data=null ;
+            List<dynamic> data=null ;
 
             if (!string.IsNullOrWhiteSpace(login.Correo) &&
                 !string.IsNullOrWhiteSpace(login.Contrasena))
@@ -38,7 +39,8 @@ namespace placesApi.Controllers
 
                 if (data.Count > 0)
                 {
-                    if (data[0]["correo"].Equals(login.Correo) && data[0]["contrasena"].Equals(login.Contrasena))
+                    if (data.Cast<dynamic>().FirstOrDefault().correo.Equals(login.Correo) 
+                        && data.Cast<dynamic>().FirstOrDefault().contrasena.Equals(login.Contrasena))
                     {
                         SymmetricSecurityKey security = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
 

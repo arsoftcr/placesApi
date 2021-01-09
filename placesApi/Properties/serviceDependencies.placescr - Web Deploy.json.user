@@ -1,0 +1,30 @@
+{
+  "dependencies": {},
+  "parameters": {
+    "placescr.subscriptionId": {
+      "Name": "placescr.subscriptionId",
+      "Type": "subscription",
+      "Value": "1507595e-3d09-4711-a739-5b8e80a1f048"
+    },
+    "placescr.resourceGroupName": {
+      "Name": "placescr.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "recurso"
+    },
+    "placescr.resourceName": {
+      "Name": "placescr.resourceName",
+      "Type": null,
+      "Value": "placescr"
+    },
+    "placescr.resourceGroupLocation": {
+      "Name": "placescr.resourceGroupLocation",
+      "Type": null,
+      "Value": "centralus"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "1507595e-3d09-4711-a739-5b8e80a1f048"
+    }
+  }
+}

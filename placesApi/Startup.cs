@@ -22,12 +22,12 @@ namespace placesApi
     public class Startup
     {
 
-        public static noef.models.Conexion Conexion = null;
+        public static noef.models.Connection Conexion = null;
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
 
-            Conexion = new noef.models.Conexion();
+            Conexion = new noef.models.Connection();
         }
 
         public IConfiguration Configuration { get; }
@@ -37,17 +37,17 @@ namespace placesApi
         {
            
 
-            Conexion.Servidor = Configuration["Contexto:Server"];
+            Conexion.Server = Configuration["Contexto:Server"];
 
-            Conexion.BaseDatos = Configuration["Contexto:Bd"];
+            Conexion.Bd = Configuration["Contexto:Bd"];
 
-            Conexion.Usuario = Configuration["Contexto:User"];
+            Conexion.User = Configuration["Contexto:User"];
 
             Conexion.Password = Configuration["Contexto:Password"];
 
             Conexion.Port = "5432";
 
-            Conexion.Tipo = noef.models.tipo.Postgres;
+            Conexion.TypeConnection = noef.models.typeConnection.Postgres;
 
             services.AddControllers();
 
@@ -146,7 +146,7 @@ namespace placesApi
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Places V1");
+                c.SwaggerEndpoint("../swagger/v1/swagger.json", "Places V1");
                
             });
 

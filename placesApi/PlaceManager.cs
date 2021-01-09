@@ -2,6 +2,7 @@
 using noef.models;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -52,16 +53,16 @@ namespace placesApi
         {
             Payloads = new Payloads();
         }
-        public async Task<List<Dictionary<string,object>>> consultarPlaces()
+        public async Task<List<dynamic>> consultarPlaces()
         {
             try
             {
-               return await Payloads.SelectFromDatabase(Startup.Conexion,select);
+               return await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion,select);
 
             }
             catch (Exception)
             {
-                return new List < Dictionary<string, object>>();
+                return new List<dynamic>();
             }
         }
         public async Task<string> crearPlace(Place place)
@@ -77,11 +78,10 @@ namespace placesApi
                 keys.Add("@link", place.linkMaps);
 
             
-                List<Dictionary<string, object>> result = await Payloads.SelectFromDatabase(Startup.Conexion,
+                List<dynamic> result = await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion,
                     insert,keys);
 
-                return result != null ? result[0].ContainsKey("insertaplace") ? 
-                    $"{result[0]["insertaplace"]}" : "error":"error";
+                return "ok";
                
                
             }
@@ -119,64 +119,63 @@ namespace placesApi
                 keys.Add("@idplace", img.Id);
                 keys.Add("@datos", img.Data);
 
-                List<Dictionary<string, object>> result = await Payloads.SelectFromDatabase(Startup.Conexion,
+                List<dynamic> result = await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion,
                      imagenInsert, keys);
 
-                return result != null ? result[0].ContainsKey("insertaimagen") ?
-                    $"{result[0]["insertaimagen"]}" : "error" : "error";
+                return "";
             }
             catch (Exception k)
             { return "error"; }
         }
 
-        public async Task<List<Dictionary<string, object>>> consultarImagenesXPlace(string id)
+        public async Task<List<dynamic>> consultarImagenesXPlace(string id)
         {
             try
             {
                 Dictionary<string, object> keys = new Dictionary<string, object>();
                 keys.Add("@id", id);
 
-                return await Payloads.SelectFromDatabase(Startup.Conexion, imagenesXPlace,keys);
+                return await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion, imagenesXPlace,keys);
 
             }
             catch (Exception)
             {
-                return new List<Dictionary<string, object>>();
+                return new List<dynamic>();
             }
         }
 
 
-        public async Task<List<Dictionary<string, object>>> consultarImagenesXIdVisual(string id)
+        public async Task<List<dynamic>> consultarImagenesXIdVisual(string id)
         {
             try
             {
                 Dictionary<string, object> keys = new Dictionary<string, object>();
                 keys.Add("@id", id);
 
-                return await Payloads.SelectFromDatabase(Startup.Conexion, selectOneImg, keys);
+                return await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion, selectOneImg, keys);
 
             }
             catch (Exception)
             {
-                return new List<Dictionary<string, object>>();
+                return new List<dynamic>();
             }
         }
-        public async Task<List<Dictionary<string, object>>> consultarImagenes()
+        public async Task<List<dynamic>> consultarImagenes()
         {
             try
             {
-                return await Payloads.SelectFromDatabase(Startup.Conexion, selectImg);
+                return await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion, selectImg);
 
             }
             catch (Exception)
             {
-                return new List<Dictionary<string, object>>();
+                return new List<dynamic>();
             }
         }
 
 
 
-        public async Task<List<Dictionary<string,object>>> validarUsuario(Login login)
+        public async Task<List<dynamic>> validarUsuario(Login login)
         {
 
             try
@@ -185,12 +184,12 @@ namespace placesApi
                 keys.Add("@correo", login.Correo);
                 keys.Add("@contra", login.Contrasena);
 
-                return await Payloads.SelectFromDatabase(Startup.Conexion, selectLogin, keys);
+                return await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion, selectLogin, keys);
             }
             catch (Exception)
             {
 
-                return new List<Dictionary<string, object>>();
+                return new List<dynamic>();
             }
            
 
