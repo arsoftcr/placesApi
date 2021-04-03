@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "placesApi", "placesApi\placesApi.csproj", "{72F00A81-8BF2-42F1-BDFB-0D8B3D75453E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "placesApi", "placesApi\placesApi.csproj", "{72F00A81-8BF2-42F1-BDFB-0D8B3D75453E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

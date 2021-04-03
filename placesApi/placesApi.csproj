@@ -18,6 +18,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\noef\noef\noef.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="placesApi.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

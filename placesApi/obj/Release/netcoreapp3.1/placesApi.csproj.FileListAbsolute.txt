@@ -161,3 +161,4 @@ C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Releas
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Release\netcoreapp3.1\placesApi.dll
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Release\netcoreapp3.1\placesApi.pdb
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Release\netcoreapp3.1\placesApi.genruntimeconfig.cache
+C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\bin\Release\netcoreapp3.1\noef.pdb

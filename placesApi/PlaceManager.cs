@@ -24,31 +24,31 @@ namespace placesApi
             "select insertaimagen(@idplace,@datos);COMMIT;ROLLBACK;";
 
 
-        private const string imagenesXPlace = "BEGIN;lock table imagen,place_imagen,place in share mode;" +
-            "select listaimagenes(@id);COMMIT;ROLLBACK;";
+        private const string imagenesXPlace = "" +
+            "select listaimagenes(@id);";
 
-        public const string select = "BEGIN;lock table place,place_imagen in share mode;" +
+        public const string select = "" +
             "SELECT  p.id, p.titulo,p.subtitulo,p.descripcion,p.telefono,p.link, CASE " +
             "WHEN pi.idimg is null THEN 'null' " +
             "else pi.idimg " +
             " END " +
             "AS idImagen " +
             "FROM place p " +
-            " left join place_imagen pi on p.id= pi.id;COMMIT;ROLLBACK;";
+            " left join place_imagen pi on p.id= pi.id;";
 
 
-        public const string selectLogin = "BEGIN;lock table login in share mode;" +
+        public const string selectLogin = "" +
             "SELECT correo,encode(decrypt(contrasena,'contrasena','3des'::text) ,'escape'::text)" +
             " as contrasena " +
             "FROM public.login where correo=@correo " +
-            "and encode(decrypt(contrasena,'contrasena','3des'::text) ,'escape'::text)=@contra;COMMIT;ROLLBACK;";
+            "and encode(decrypt(contrasena,'contrasena','3des'::text) ,'escape'::text)=@contra;";
 
 
-        public const string selectImg = "BEGIN;lock table imagen in share mode;" +
-            "SELECT id, data FROM public.imagen;COMMIT;ROLLBACK;";
+        public const string selectImg = "" +
+            "SELECT id, data FROM public.imagen;";
 
-        public const string selectOneImg = "BEGIN;lock table imagen in share mode;" +
-            "SELECT id, data FROM public.imagen where id=@id;COMMIT;ROLLBACK;";
+        public const string selectOneImg = "" +
+            "SELECT id, data FROM public.imagen where id=@id;COMMIT;";
         public PlaceManager()
         {
             Payloads = new Payloads();

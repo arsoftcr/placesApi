@@ -148,12 +148,8 @@ C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\bin\Debug\
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.csprojAssemblyReference.cache
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.AssemblyInfoInputs.cache
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.AssemblyInfo.cs
-C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.csproj.CoreCompileInputs.cache
-C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.RazorTargetAssemblyInfo.cache
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.csproj.CopyComplete
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\staticwebassets\placesApi.StaticWebAssets.Manifest.cache
@@ -161,3 +157,8 @@ C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.dll
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.pdb
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.genruntimeconfig.cache
+C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\bin\Debug\netcoreapp3.1\noef.pdb
+C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.csprojAssemblyReference.cache
+C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.MvcApplicationPartsAssemblyInfo.cache
