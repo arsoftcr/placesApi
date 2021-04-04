@@ -158,7 +158,6 @@ C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.pdb
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.genruntimeconfig.cache
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\bin\Debug\netcoreapp3.1\noef.pdb
-C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.csprojAssemblyReference.cache
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Administrator\Documents\MIS REPOSITORIOS\placesApi\placesApi\obj\Debug\netcoreapp3.1\placesApi.MvcApplicationPartsAssemblyInfo.cache

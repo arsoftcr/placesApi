@@ -16,7 +16,7 @@ namespace placesApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ImagenesController : ControllerBase
     {
      

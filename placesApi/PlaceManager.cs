@@ -12,13 +12,13 @@ namespace placesApi
     {
         private Payloads Payloads;
 
-        private const string insert = "BEGIN;lock table place in share mode;" +
+        private const string insert = "BEGIN;lock table place,place_login in share mode;" +
             "select insertaplace(" +
-            "@titulo, @subtitulo, @descripcion,@telefono , @link);COMMIT;ROLLBACK;";
+            "@login,@titulo, @subtitulo, @descripcion,@telefono , @link);COMMIT;ROLLBACK;";
 
-        private const string registrar = "BEGIN;lock table login in share mode;" +
-            "INSERT INTO public.login(correo, contrasena) " +
-            "VALUES(@correo, encrypt('@contra', 'contrasena', '3des'));COMMIT;ROLLBACK;";
+        private static string registrar(string contra) { return "BEGIN;lock table login in share mode;" +
+             "INSERT INTO public.login(correo, contrasena) " +
+             $"VALUES(@correo, encrypt('{contra}', 'contrasena', '3des'));COMMIT;ROLLBACK;"; }
 
         private const string imagenInsert = "BEGIN;lock table public.imagen,public.place_imagen in share mode;" +
             "select insertaimagen(@idplace,@datos);COMMIT;ROLLBACK;";
@@ -49,6 +49,16 @@ namespace placesApi
 
         public const string selectOneImg = "" +
             "SELECT id, data FROM public.imagen where id=@id;COMMIT;";
+
+        public const string selectWeb = "select p.id,p.titulo,p.subtitulo,p.descripcion,p.telefono,p.link " +
+            "from place_login pl " +
+            "join place p " +
+            "on p.id=pl.id " +
+            "where pl.correo= @correo";
+
+        public const string patch = "update place set titulo=@titulo" +
+            ",subtitulo=@subtitulo,descripcion=@descripcion,telefono=@telefono,link=@link" +
+            " where id=@id";
         public PlaceManager()
         {
             Payloads = new Payloads();
@@ -65,12 +75,28 @@ namespace placesApi
                 return new List<dynamic>();
             }
         }
-        public async Task<string> crearPlace(Place place)
+
+        public async Task<List<dynamic>> consultarPlacesWeb(string pcorreo)
+        {
+            try
+            {
+                Dictionary<string, object> keys = new Dictionary<string, object>();
+                keys.Add("@correo", pcorreo);
+                return await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion, selectWeb,keys);
+
+            }
+            catch (Exception)
+            {
+                return new List<dynamic>();
+            }
+        }
+        public async Task<string> crearPlace(PlaceLogin place)
         {
             try
             {
 
                 Dictionary<string, object> keys = new Dictionary<string, object>();
+                keys.Add("@login", place.Login);
                 keys.Add("@titulo", place.Titulo);
                 keys.Add("@subtitulo", place.Subtitulo);
                 keys.Add("@descripcion", place.Descripcion);
@@ -90,18 +116,43 @@ namespace placesApi
         }
 
 
+        public async Task<string> patchPlace(Place place)
+        {
+            try
+            {
+
+                Dictionary<string, object> keys = new Dictionary<string, object>();
+                keys.Add("@id", place.Id);
+                keys.Add("@titulo", place.Titulo);
+                keys.Add("@subtitulo", place.Subtitulo);
+                keys.Add("@descripcion", place.Descripcion);
+                keys.Add("@telefono", place.Telefono);
+                keys.Add("@link", place.linkMaps);
+
+
+                List<dynamic> result = await Payloads.SelectFromDatabaseGenericObject(Startup.Conexion,
+                    patch, keys);
+
+                return "ok";
+
+
+            }
+            catch (Exception k)
+            { return "error"; }
+        }
+
         public async Task<string> registro(Login login)
         {
             try
             {
 
                 Dictionary<string, object> keys = new Dictionary<string, object>();
-                keys.Add("@correo", login.Correo);
-                keys.Add("@contra",login.Contrasena);
+                keys.Add("@correo", login.Correo.ToLowerInvariant());
+               
 
 
                int result = await Payloads.InsertOrUpdateOrDeleteDatabase(Startup.Conexion,
-                    registrar, keys);
+                    registrar(login.Contrasena), keys);
 
                 return result==1?"realizado":"error";
 

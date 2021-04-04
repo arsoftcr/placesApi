@@ -24,11 +24,19 @@ namespace placesApi.Controllers
             }
         }
 
-      
+        [HttpGet("/web",Name ="web")]
+        public async Task<IActionResult> GetWeb([FromQuery] string correo)
+        {
+            using (var plaze = new PlaceManager())
+            {
+                return Ok(await plaze.consultarPlacesWeb(correo));
+            }
+        }
+
 
         // POST api/<PlacesController>
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] Place place)
+        public async Task<IActionResult> Post([FromBody] PlaceLogin place)
         {
 
             using (var plaze=new PlaceManager())
@@ -37,16 +45,17 @@ namespace placesApi.Controllers
             }
         }
 
-        // PUT api/<PlacesController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        // POST api/<PlacesController>
+        [HttpPatch]
+        public async Task<IActionResult> Patch([FromBody] Place place)
         {
+
+            using (var plaze = new PlaceManager())
+            {
+                return Ok(await plaze.patchPlace(place));
+            }
         }
 
-        // DELETE api/<PlacesController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
+
     }
 }
